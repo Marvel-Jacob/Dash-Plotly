@@ -201,7 +201,7 @@ def render_cards(card1, card2, card3, card4):
 
 executives = pd.read_csv('executives.csv')
 try:
-    file_url = "https://docs.google.com/spreadsheets/d/e/2PACX-fs1hWXcZ_GRwyB-P1OBarCC_Ry/pub?gid=151&single=true&output=csv" #dummy url
+    file_url = "https://docs.google.com/spreadsheets/d/e/2PACX-fs1hWXcZ1&single=true&output=csv" #dummy url
     master_data = pd.read_csv(file_url)
 except:
     print('Reading from local storage')
@@ -269,7 +269,7 @@ donut_data = donut_data.groupby(['State', 'AE', 'Beat Name']).count().reset_inde
 dsr_dashboard_layout = html.Div([
     html.Div([
         html.Div([
-            html.H1(id="header", children="AE Performance Dashboard", className="header-style"),
+            html.H1(id="header", children="Performance Dashboard", className="header-style"),
             html.Div([
                 # html.Div([
                 #     dcc.Upload(
